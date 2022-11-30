@@ -1,0 +1,29 @@
+{
+  "name": "reamix",
+  "version": "2.0.0",
+  "description": "A simple and convenient browser based on Electron.",
+  "main": "main.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "npx electron .",
+    "dev": "npx electron .",
+    "build": "npx electron-builder --config builder.config.js --publish never",
+    "setup": "src\\environment.cmd"
+  },
+  "author": "Kannoki",
+  "devDependencies": {
+    "electron": "^19.0.7",
+    "electron-builder": "^23.1.0"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.23.8",
+    "cross-fetch": "^3.1.5",
+    "download-crx": "^1.1.0",
+    "electron-chrome-extensions": "^3.9.0",
+    "electron-context-menu": "^3.3.0",
+    "electron-extensions": "^7.0.0-beta.3",
+    "electron-store": "^8.0.2",
+    "fs-extra": "^10.1.0",
+    "unzip-crx-3": "^0.2.0"
+  }
+}
