@@ -199,7 +199,6 @@ These apply to pages such as Home, Settings and Extensions.
       )
     }
 
-    //強制ダークモード(Force-Dark)
     if (store.get('experimental.forcedark')) {
       browserview.webContents.insertCSS(`
         *{
@@ -212,7 +211,6 @@ These apply to pages such as Home, Settings and Extensions.
           color: #7aa7cd!important;
         }`)
     }
-    //フォント変更
     if (store.get('experimental.changedfont')) {
       browserview.webContents.insertCSS(`
         body,body>*, *{
@@ -384,7 +382,6 @@ ipcMain.handle('moveView', (e, link, index) => {
   } else if (link === 'reamix://downloads') {
     openPage('downloads')
   } else {
-    // ユーザーエージェントの置き換え
     const currentUA = win.webContents.getUserAgent()
     const chromeUA = currentUA
       .replace(/reamix\/.*?.[0-9]\s/g, '')
